@@ -9,7 +9,7 @@ console.log(port, key);
 app.use(express.json());
 
 app.get("/", (_, res) => {
-  res.json({ ok: [1, 2, 3, 4, 5, 6, 7] });
+  res.json({ ok: [1, 2, 3, 4, 5, 6, 7], port, key });
 });
 app.post("/signup", (req, res) => {
   try {
