@@ -5,11 +5,11 @@ require("dotenv").config();
 
 const port = process.env.PORT;
 const key = process.env.SECRET_KEY;
-console.log(port, key);
+
 app.use(express.json());
 
 app.get("/", (_, res) => {
-  res.json({ ok: [1, 2, 3, 4, 5, 6, 7], port, key });
+  res.json({ ok: [1, 2, 3, 4, 5, 6, 7], port, key: `key - ${key}` });
 });
 app.post("/signup", (req, res) => {
   try {
